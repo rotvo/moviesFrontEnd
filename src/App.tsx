@@ -268,7 +268,7 @@ const App = () => {
           component="div"
           count={moviesResponse.total_results}
           page={page}
-          onPageChange={(event, newPage) => setPage(newPage)}
+          onPageChange={(_, newPage) => setPage(newPage)}
           rowsPerPage={rowsPerPage}
           onRowsPerPageChange={(event) =>
             setRowsPerPage(parseInt(event.target.value, 10))
@@ -346,7 +346,7 @@ const App = () => {
                 </Typography>
                 <Rating
                   value={userRating}
-                  onChange={(event, newValue) => setUserRating(newValue)}
+                  onChange={(_, newValue) => setUserRating(newValue)}
                   precision={0.5}
                   max={5}
                   sx={{ mb: 2 }}
